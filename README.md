@@ -31,7 +31,7 @@ The test suite includes unit tests, integration tests that require PostgreSQL, a
 
 ## CI/CD
 
-GitHub Actions runs the full pytest suite against a Postgres service container. After tests pass on `main`, the workflow builds and pushes the image to Docker Hub. A separate security job builds the image and scans it with Trivy.
+GitHub Actions runs the full pytest suite against PostgreSQL. After tests pass on `main`, the workflow builds and pushes the image to Docker Hub when Docker Hub secrets are configured.
 
 Required repository secrets:
 
@@ -40,9 +40,7 @@ Required repository secrets:
 
 Docker Hub repository:
 
-- `https://hub.docker.com/r/<your-dockerhub-username>/assignment10`
-
-Replace `<your-dockerhub-username>` with the Docker Hub account configured in `DOCKERHUB_USERNAME`.
+- `https://hub.docker.com/r/orensesj/assignment10`
 
 ---
 
